@@ -1,7 +1,6 @@
 const TOTAL_WIDTH = 480;
 const START_NUM_SQUARES = 16;
 
-
 const main = document.querySelector("body");
 const script = document.querySelector("script");
 const container = document.createElement("div");
@@ -30,14 +29,16 @@ btn.addEventListener("click", () => {
     }
 })
 
+
 function setHover() {
     const square = document.querySelectorAll(".square");
     square.forEach( (square) => {
-        square.addEventListener("mouseenter", () => {
+        square.addEventListener("mouseover", () => {
             square.style.backgroundColor = "black";
         })
     })
 }
+
 
 function removeGrid() {
     const square = document.querySelectorAll(".square");
@@ -45,6 +46,7 @@ function removeGrid() {
         container.removeChild(square);
     })
 }
+
 
 function addGrid(numSquares) {
     const square = document.querySelectorAll(".square");
@@ -56,6 +58,7 @@ function addGrid(numSquares) {
         container.appendChild(newSquare);
     }
 }
+
 
 function setSquareWidth(numSquares) {
 
