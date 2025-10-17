@@ -9,17 +9,17 @@ body {
 
 #container {
     align-self: center;
-    width: 480px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 480px;
+    outline: 1px solid black;
 }
 
 .square {
     width: 30px;
     height: 30px;
-    outline: 1px solid black;
 }
 
 #header {
