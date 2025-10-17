@@ -34,7 +34,8 @@ function setHover() {
     const square = document.querySelectorAll(".square");
     square.forEach( (square) => {
         square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = "black";
+            let rgbNumber = getColor();
+            square.style.backgroundColor = rgbNumber;
         })
     })
 }
@@ -70,7 +71,14 @@ function setSquareWidth(numSquares) {
     })
 }
 
+function getColor() {
+    const red = Math.round(Math.random() * 225);
+    const green = Math.round(Math.random() * 225);
+    const blue = Math.round(Math.random() * 225);
+    const rgbNumber = "rgb(" + red + ", " + green + ", " + blue + ")";
+    return rgbNumber; 
+}
+
 
 addGrid(START_NUM_SQUARES);
 setHover();
-
