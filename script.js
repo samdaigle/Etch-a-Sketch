@@ -18,13 +18,16 @@ header.appendChild(btn);
 btn.textContent = "Reset";
 
 
-
 btn.addEventListener("click", () => {
     let numSquares = prompt("Set the number of squares: ")
-    removeGrid();
-    addGrid(+numSquares);
-    setSquareWidth(+numSquares);
-    setHover();
+    if (numSquares > 100) {
+        alert("Maximum number of squares is 100. Try Again");
+    } else {
+        removeGrid();
+        addGrid(+numSquares);
+        setSquareWidth(+numSquares);
+        setHover();
+    }
 })
 
 function setHover() {
@@ -56,13 +59,12 @@ function addGrid(numSquares) {
 
 function setSquareWidth(numSquares) {
 
-    squareWidth = TOTAL_WIDTH / numSquares;
+    let squareWidth = TOTAL_WIDTH / numSquares;
     const square = document.querySelectorAll(".square");
     square.forEach((square) => {
         square.style.width = squareWidth + "px";
         square.style.height = squareWidth + "px";
     })
-
 }
 
 
