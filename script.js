@@ -33,9 +33,12 @@ btn.addEventListener("click", () => {
 function setHover() {
     const square = document.querySelectorAll(".square");
     square.forEach( (square) => {
+        let opacity = 0;
         square.addEventListener("mouseover", () => {
             let rgbNumber = getColor();
+            opacity += .1
             square.style.backgroundColor = rgbNumber;
+            square.style.opacity = opacity;
         })
     })
 }
