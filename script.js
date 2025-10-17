@@ -14,4 +14,8 @@ for (let i = 0; i < 256; i++) {
 
 const square = document.querySelectorAll(".square");
 
-console.log(square);
+square.forEach( (square) => {
+    square.addEventListener("mouseenter", () => {
+        square.style.backgroundColor = "black";
+    })
+})
